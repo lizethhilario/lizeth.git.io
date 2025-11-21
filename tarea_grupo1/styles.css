@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+/* --- Barra lateral fija --- */
+.sidebar {
+  position: fixed;        /* la fija en pantalla */
+  top: 0;                 /* desde el borde superior */
+  left: 0;                /* pegada al borde izquierdo */
+  height: 100vh;          /* ocupa toda la altura visible */
+  width: 250px;
+  background-color: #f396d7;
+  color: #f12d0a;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;       /* si hay muchos menús, permite desplazarse dentro */
+}
+
+.sidebar h2 {
+  color: #e23010;
+  text-align: center;
+}
+
+/* --- Menú lateral --- */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu > li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #6811ca;
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.menu a:hover {
+  background-color: #f70e0e;
+}
+
+.submenu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+/* --- Contenido principal --- */
+.main {
+  margin-left: 250px;     /* deja espacio para la barra lateral fija */
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #ee8a08;
+  overflow-y: auto;
+}
+
+.foto-pequena {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #db1515;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.link-diseño {
+  color: #33d6ce;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-diseño:hover {
+  text-decoration: underline;
+  color: #ff69b4;
+}
